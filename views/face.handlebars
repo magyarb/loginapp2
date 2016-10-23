@@ -1,0 +1,12 @@
+{{#each res}}
+    {{facebook.id}}: {{facebook.name}}
+    <br>
+{{/each}}
+
+<!---{{{json res}}}--->
+<form method="get" action="/face">
+    <button color="blue" class="btn btn-default">Test Facebook</button>
+</form>
+<form method="get" action="/face/friends">
+    <button color="blue" class="btn btn-default">Friends</button>
+</form>

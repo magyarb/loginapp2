@@ -2,6 +2,7 @@
   "name": "angular-quickstart",
   "version": "1.0.0",
   "scripts": {
+    "lofasz": "echo asd",
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "lite": "lite-server",
     "postinstall": "typings install",

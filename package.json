@@ -1,13 +1,11 @@
 {
   "name": "loginapp",
   "version": "1.0.0",
-  "description": "Simple authentication system",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install && cd public && npm install && echo build done",
+    "run": "node app.js"
   },
-  "author": "Brad Traversy",
-  "license": "ISC",
   "dependencies": {
     "bcryptjs": "*",
     "body-parser": "*",
@@ -25,6 +23,7 @@
     "passport-local": "*",
     "passport-facebook": "*",
     "passport-instagram": "*",
-    "instagram-node": "*"
+    "instagram-node": "*",
+    "fbgraph": "*"
   }
 }

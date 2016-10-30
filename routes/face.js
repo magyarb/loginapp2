@@ -12,7 +12,7 @@ var graph = require('fbgraph');
 var Voter = require('../models/voter');
 
 var friends = new Object();
-
+/*
 router.get('/', function(req, res){
     FB.setAccessToken(req.user.facebook.token);
     console.log(req.user.facebook.token);
@@ -42,7 +42,7 @@ router.get('/', function(req, res){
     });
 
 });
-
+*/
 router.get('/getvoters', function(req, res){
     Voter.remove({}, function(err) {
         if (!err) {
@@ -93,6 +93,23 @@ router.get('/showvoters', function(req, res){
     });
 });
 
+router.get('/voters', function(req, res){
+  Voter.find({}, function(err, voters) {
+    //res.send(voters);
+    if(req.isAuthenticated()){
+
+      res.send("Welcome, " + req.user.facebook.name + "!");
+      //res.send(voters);
+    } else {
+      //req.flash('error_msg','You are not logged in');
+      res.send('not logged in');
+    }
+  });
+});
+
+router.all('*', function(req, res){
+  res.status(404).send("Not found.");
+});
 
 
 

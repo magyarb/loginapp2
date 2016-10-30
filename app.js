@@ -88,6 +88,11 @@ app.use('/users', users);
 app.use('/insta', insta);
 app.use('/face', face);
 
+app.use(function(req, res) {
+  // Use res.sendfile, as it streams instead of reading the file into memory.
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 // Set Port
 app.set('port', (process.env.PORT || 3000));
 

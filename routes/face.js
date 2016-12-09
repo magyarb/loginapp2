@@ -78,7 +78,6 @@ router.get('/getvoters', function(req, res){
         else
         {
             req.flash('success_msg', 'Got voters');
-
             res.redirect('/');
         }
     }

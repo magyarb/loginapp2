@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
 import { Router } from '@angular/router';
-
+import { HttpModule } from '@angular/http';
 
 /**
  * Created by balazs on 10/18/2016.

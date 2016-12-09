@@ -17,6 +17,9 @@ var heroes_component_1 = require("./heroes.component");
 var hero_service_1 = require("./hero.service");
 var dashboard_component_1 = require("./dashboard.component");
 var app_routing_module_1 = require("./app-routing.module");
+var http_1 = require("@angular/http");
+var slide_1 = require("./slide");
+var instapic_service_1 = require("./instapic.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,16 +28,18 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule,
+                http_1.HttpModule
             ],
             declarations: [
                 app_component_1.AppComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,
-                dashboard_component_1.DashboardComponent
+                dashboard_component_1.DashboardComponent,
+                slide_1.SlideComponent
             ],
             bootstrap: [app_component_1.AppComponent],
-            providers: [hero_service_1.HeroService]
+            providers: [hero_service_1.HeroService, instapic_service_1.InstapicService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

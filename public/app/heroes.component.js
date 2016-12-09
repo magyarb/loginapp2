@@ -14,6 +14,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var hero_service_1 = require('./hero.service');
 var router_1 = require("@angular/router");
+var core_2 = require('@angular/core');
 var HeroesComponent = (function () {
     function HeroesComponent(heroService, router) {
         this.heroService = heroService;
@@ -37,7 +38,21 @@ var HeroesComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-heroes',
-            templateUrl: 'heroes.component.html'
+            templateUrl: 'heroes.component.html',
+            animations: [
+                core_2.trigger('heroState', [
+                    core_2.state('inactive', core_2.style({
+                        backgroundColor: '#eee',
+                        transform: 'scale(1)'
+                    })),
+                    core_2.state('active', core_2.style({
+                        backgroundColor: '#cfd8dc',
+                        transform: 'scale(1.1)'
+                    })),
+                    core_2.transition('inactive => active', core_2.animate('100ms ease-in')),
+                    core_2.transition('active => inactive', core_2.animate('100ms ease-out'))
+                ])
+            ]
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.Router])
     ], HeroesComponent);

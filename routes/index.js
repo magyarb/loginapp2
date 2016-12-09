@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Voter = require('../models/voter');
 // Get Homepage
-router.get('/', ensureAuthenticated, function(req, res){
+router.get('/nong', ensureAuthenticated, function(req, res){
 	var fbname = req.user.facebook.name;
 	var instaname = req.user.instagram.username;
 	Voter.find({'facebook.id' : req.user.facebook.id}, function(err, voters) {

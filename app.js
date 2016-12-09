@@ -21,6 +21,7 @@ var users = require('./routes/users');
 
 var insta = require('./routes/insta');
 var face = require('./routes/face');
+var api = require('./routes/api');
 
 // Init App
 var app = express();
@@ -87,6 +88,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/insta', insta);
 app.use('/face', face);
+app.use('/api', api);
 
 app.use(function(req, res) {
   // Use res.sendfile, as it streams instead of reading the file into memory.

@@ -6,15 +6,15 @@
  {{#if instaname}}
  <p>Instagram account {{instaname}} is connected.</p>
  {{/if}}
- {{#if voter}}
+ <!--{{#if voter}}
 Neked van jogod szavazni.
  {{else}}
 Nincs jogod szavazni.
-{{/if}}
+{{/if}}-->
  <form method="get" action="/insta">
      <button color="blue" class="btn btn-default">Test Instagram</button>
  </form>
- <form method="get" action="/face">
+ <!---<form method="get" action="/face">
      <button color="blue" class="btn btn-default">Test Facebook</button>
  </form>
  <form method="get" action="/face/getvoters">
@@ -22,7 +22,7 @@ Nincs jogod szavazni.
  </form>
  <form method="get" action="/face/showvoters">
      <button color="blue" class="btn btn-default">Show voters</button>
- </form>
+ </form>-->
  <form method="post" action="/insta/tag">
      <div class="form-group">
          <label>hashtag</label>
@@ -30,7 +30,7 @@ Nincs jogod szavazni.
      </div>
      <button type="submit" class="btn btn-default">Submit</button>
  </form>
-
+<!--
  <form method="post" action="/api/hero">
    <div class="form-group">
      <label>hashtag</label>
@@ -39,4 +39,4 @@ Nincs jogod szavazni.
      <input type="text" class="form-control" name="name" placeholder="name">
    </div>
    <button type="submit" class="btn btn-default">new hero</button>
- </form>
+ </form>-->

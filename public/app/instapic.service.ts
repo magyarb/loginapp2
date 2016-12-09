@@ -16,12 +16,6 @@ export class InstapicService {
 
     constructor(private http: Http) { }
 
-    /*getHeroes(): Promise<Hero[]> {
-     return this.http.get(this.heroesUrl)
-     .toPromise()
-     .then(response => response.json() as Hero[])
-     .catch(this.handleError);
-     }*/
     getPics(tag): Promise<instapic[]> {
       return this.http.get("/api/tag/"+tag)
         .toPromise()

@@ -23,11 +23,8 @@ export class SlideComponent implements OnInit{
       let tag = params['tag'];
       this.getPics(tag);
     });
-
         setTimeout(() => {this.startShow()},1000);
-
     }
-
     constructor(private picservice: InstapicService,
                 private route: ActivatedRoute,
                 private router: Router) { }
